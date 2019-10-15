@@ -1,0 +1,17 @@
+mixin card-info(item)
+  .card.shadow.pb-3
+    a.mx-auto(href=item.url)
+      img.card-img-top.card-image.mx-auto.px-3.py-3(src=item.img, alt=item.name+" logo")
+    .card-body
+      a(href=item.url)
+        h5.card-title.poppins.header-text.capitalize #{item.name}
+      p.card-text.raleway.main-text #{item.brief}
+      a.accent.capitalize(href=item.url) Learn more
+
+mixin tech-cards(list, item, name, type)
+  h2.mb-3.poppins.header-text.capitalize #{name}
+  .row
+    each item in list 
+      if item.type === type
+        .col-12.col-md-6.col-lg-4.mb-3.d-flex
+          +card-info(item)

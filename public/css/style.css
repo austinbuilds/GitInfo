@@ -1,0 +1,134 @@
+/* Custom Properties */
+:root {
+  /* Text */
+  --brand-color: #5857bc;
+  --header-color: #1b1943;
+  --text-color: #6c6b75;
+  /* Body */
+  --light-1: #ffffff;
+  --light-2: #fafbfc;
+  --light-3: #f5f6f9;
+  --accent-light: #e09c4a;
+  --accent-bold: #e48250;
+  --main-lightest: #c2beef;
+  --main-light: #ababe9;
+  --main-medium: #7b7ddd;
+  --main-dark: #5857bc;
+  --main-darkest: #1b1943;
+}
+
+/* Global */
+body {
+  min-height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Font */
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Color */
+.brand-text {
+  color: var(--brand-color);
+}
+
+.header-text {
+  color: var(--header-color);
+}
+
+.main-text {
+  color: var(--text-color);
+}
+
+.accent {
+  color: var(--accent-bold);
+}
+
+.btn-accent {
+  color: var(--light-1);
+  background-color: var(--accent-bold);
+}
+
+/* Position */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.zero {
+  z-index: -1;
+}
+
+/* Sizing */
+.vertical-gap {
+  margin-bottom: 30vh;
+}
+
+.btn-wide {
+  padding-left: 5.5%;
+  padding-right: 5.5%;
+}
+
+.card-img-top {
+  max-height: 40vh;
+}
+
+img {
+  width: 100%;
+}
+
+.card-image {
+  max-height: 100px;
+  width: auto;
+}
+
+.tech-image {
+  max-height: 200px;
+  width: auto;
+}
+
+/* Other */
+.container-fluid {
+  padding: 0 10%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.btn {
+  color: var(--light-1);
+}
+
+.btn {
+  border-radius: 50px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--light-3);
+}
+
+.footer-icon {
+  font-weight: 200;
+}

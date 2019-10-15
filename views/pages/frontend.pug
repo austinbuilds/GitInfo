@@ -1,0 +1,40 @@
+include ../partials/header
+include ../mixins/tech-cards
+
+header
+  .jumbotron.bg-transparent.vertical-gap
+    .container-fluid
+      .row
+        .col-12.mb-5.col-md-6.col-lg-5.offset-lg-1.my-auto
+          h1.poppins.header-text.capitalize Front end #[br]technologies
+          p.raleway.main-text.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sint impedit dolorem sunt minima inventore nihil in iusto corrupti ipsum.
+
+        .col-12.col-md-6.my-auto
+          img.hero-image(src="img/svg/Full Stack Hero Image.svg", alt="User with design interface")
+
+main
+  //- CSS Frameworks
+  section.vertical-gap
+    .container-fluid
+      .row
+        .col-12.mt-5.order-last.col-md-8.order-md-first.col-lg-7.my-auto
+          +tech-cards(list, item, "CSS Frameworks", "cssframework")
+            
+        .col-12.order-first.col-md-4.order-md-last.col-lg-5.my-auto
+          img(src="img/svg/Front End Image Top.svg", alt="Color Swatches")
+
+  //- CSS PreProcessors & JavaScript Frameworks
+  section.vertical-gap
+    .container-fluid
+      .row
+        .col-12.col-md-4.col-lg-5.my-auto
+          img(src="img/svg/Front End Image Bottom.svg", alt="Website being designed")
+
+        .col-12.col-md-8.col-lg-7.my-auto
+          +tech-cards(list, item, "CSS PreProcessors", "csspreprocessor")
+          +tech-cards(list, item, "JavaScript Frameworks", "jsframework")
+
+  //- Card
+  include ../components/card
+
+include ../partials/footer

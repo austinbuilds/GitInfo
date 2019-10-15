@@ -1,0 +1,23 @@
+section.vertical-gap
+  .container-fluid
+    .row.justify-content-center
+      
+      if title === "Home" || title === "Back End"
+        .col-12.col-md-6.col-lg-5.mb-5
+          .card.shadow.pb-3
+            a(href="frontend")
+              img.card-img-top.mx-auto.px-5.py-5(src="img/svg/Front End Card Image.svg", alt="User designing page")
+            .card-body
+              h2.card-title.poppins.header-text.capitalize Front end
+              p.card-text.raleway.main-text Compare various popular front end tools, including CSS preprocessors like Sass, CSS frameworks like Bootstrap, and JavaScript libraries like React.
+              a.accent.capitalize(href="frontend") Learn more
+
+      if title === "Home" || title === "Front End"
+        .col-12.col-md-6.col-lg-5
+          .card.shadow.pb-3
+            a(href="backend")
+              img.card-img-top.mx-auto.px-5.py-5(src="img/svg/Back End Card Image.svg", alt="User standing near data")
+            .card-body
+              h2.card-title.poppins.header-text.capitalize Back end
+              p.card-text.raleway.main-text Explore the back end options, including Node frameworks, databases, tamplate engines, module bundlers task runners, and testing frameworks.
+              a.accent.capitalize(href="backend") Learn more

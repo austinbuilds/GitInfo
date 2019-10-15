@@ -1,0 +1,41 @@
+include ../mixins/alert
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    if title === "Home"
+      title GitInfo - Popular Web Development Repos
+    if git
+      title GitInfo - #{git.name}
+    else
+      title GitInfo - #{title}
+    //- Fonts
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway&display=swap" rel="stylesheet">
+    //- Styles
+    //- link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+    //- link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css")
+    //- Offline Dev
+    link(rel="stylesheet" href="boot/css/bootstrap.min.css")
+    link(rel="stylesheet" href="fontawesome/css/all.min.css")
+    link(rel="stylesheet" href="/css/style.css")
+  body
+
+    if msg
+      +alert(msg)
+
+    nav.navbar.navbar-expand-md.navbar-light.mt-md-2.mb-md-0.my-lg-4
+      .container-fluid
+        a.poppins.brand-text.bold.h5(href="/") GitInfo
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation") #[span.navbar-toggler-icon]
+
+        div.collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link.main-text(href="frontend") Front End
+            li.nav-item
+              a.nav-link.main-text(href="backend") Back End
+            li.nav-item
+              a.nav-link.main-text(href="about") About

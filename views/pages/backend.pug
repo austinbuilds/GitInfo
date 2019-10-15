@@ -1,0 +1,52 @@
+include ../partials/header
+include ../mixins/tech-cards
+
+header
+  .jumbotron.bg-transparent.vertical-gap
+    .container-fluid
+      .row
+        .col-12.mb-5.col-md-6.col-lg-5.offset-lg-1.my-auto
+          h1.poppins.header-text.capitalize Back end #[br]technologies
+          p.raleway.main-text.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sint impedit dolorem sunt minima inventore nihil in iusto corrupti ipsum.
+
+        .col-12.col-md-6.my-auto
+          img.hero-image(src="img/svg/Back End Image.svg", alt="User walking by IDE")
+
+main
+  //- Node Frameworks & Databases
+  section.vertical-gap
+    .container-fluid
+      .row
+        .col-12.mt-5.order-last.col-md-8.order-md-first.col-lg-7.my-auto
+          +tech-cards(list, item, "Node Frameworks", "nodeframework")
+          +tech-cards(list, item, "Databases", "database")
+
+        .col-12.order-first.col-md-4.order-md-last.col-lg-5.my-auto
+          img(src="img/svg/Back End Image Top.svg", alt="Server and computer")
+
+  //- Template Engines & Module Bundlers
+  section.vertical-gap
+    .container-fluid
+      .row
+        .col-12.col-md-4.col-lg-5.my-auto
+          img(src="img/svg/Back End Image Middle.svg", alt="Files")
+
+        .col-12.col-md-8.col-lg-7.my-auto
+          +tech-cards(list, item, "Template Engines", "template")
+          +tech-cards(list, item, "Module Bundlers", "bundler")
+
+  //- Task Runners & Testing Frameworks
+  section.vertical-gap
+    .container-fluid
+      .row
+        .col-12.mt-5.order-last.col-md-8.order-md-first.col-lg-7.my-auto
+          +tech-cards(list, item, "Task Runners", "taskrunner")
+          +tech-cards(list, item, "Testing Frameworks", "testing")
+
+        .col-12.order-first.col-md-4.order-md-last.col-lg-5.my-auto
+          img(src="img/svg/Back End Image Bottom.svg", alt="Speedometer")
+
+  //- Card
+  include ../components/card
+
+include ../partials/footer

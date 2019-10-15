@@ -1,0 +1,88 @@
+include ../partials/header
+
+section.vertical-gap
+  .container-fluid
+    .row.mt-5
+      .card.text-center.col-12.col-md-10.mx-auto.px-0
+        .card-header.capitalize
+          h1 #{unit.name}
+
+        //- Body
+        .card-body.my-5
+
+          //- Image
+          .row.mb-3
+            img.tech-image.mx-auto(src=unit.img alt=unit.name+' logo')
+
+          //- Description
+          .row
+            .col.col-md-8.mx-auto
+              if wiki
+                blockquote.blockquote #[i.fas.fa-quote-left] #{wiki.extract}
+                .blockquote-footer
+                  <small class="text-muted">
+                    <cite title="Source Title">Wikipedia</cite>
+                  </small>
+              else
+                blockquote.blockquote #[i.fas.fa-quote-left] #{git.description}
+                  .blockquote-footer
+                    <small class="text-muted">
+                      <cite title="Source Title">GitHub</cite>
+                    </small>
+
+          //- GitHub Stats
+          .list-group.list-group-flush
+            .list-group-item
+              .row.justify-content-center.d-flex.align-items-center.my-5
+                  .col-12.text-center.mb-3.col-md-6.mb-md-0.text-md-right
+                    i.fab.fa-github.fa-10x
+
+                  .col-12.col-md-6
+                    .row.align-items-center
+                      .col-4.col-md-2.text-center.pr-0
+                        i.fas.fa-star
+                      .col-8.col-md-10.text-left.pl-0
+                        p.h4.mb0 #{git.stargazers_count}
+
+                    .row.align-items-center
+                      .col-4.col-md-2.text-center.pr-0
+                        i.fas.fa-code-branch
+                      .col-8.col-md-10.text-left.pl-0
+                        p.h4.mb0 #{git.forks}
+
+                    .row.align-items-center
+                      .col-4.col-md-2.text-center.pr-0
+                        i.fas.fa-users
+                      .col-8.col-md-10.text-left.pl-0
+                        p.h4.mb0 #{git.subscribers_count}
+
+                    .row.align-items-center
+                      .col-4.col-md-2.text-center.pr-0
+                        //- i.fas.fa-calendar-alt
+                        i.fas.fa-file
+                      .col-8.col-md-10.text-left.pl-0
+                        p.h4.mb0 #{new Date(git.created_at).toLocaleDateString()}
+
+                    .row.align-items-center
+                      .col-4.col-md-2.text-center.pr-0
+                        //- i.fas.fa-calendar-plus
+                        i.fas.fa-file-alt
+                      .col-8.col-md-10.text-left.pl-0
+                        p.h4.mb0 #{new Date(git.updated_at).toLocaleDateString()}
+
+          if unit.twitter
+            .row.justify-content-center.my-5
+              .col-10.col-md-6
+                a(href="https://twitter.com/"+unit.twitter class="twitter-timeline" data-width="400" data-height="500" data-dnt="true" data-theme="light")
+                  script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+
+        //- Card Footer
+        .card-footer
+          .row.my-3.justify-content-center
+            .col-8.col-sm-6.col-md-4
+              a.btn.btn-block.btn-accent(href='') #[i.fab.fa-github-square] GitHub
+          .row.my-3.justify-content-center
+            .col-8.col-sm-6.col-md-4
+              a.btn.btn-block.btn-accent(href='') #[i.fas.fa-window-maximize] Homepage
+
+include ../partials/footer

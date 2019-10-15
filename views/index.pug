@@ -1,0 +1,46 @@
+include ./partials/header
+
+header
+  .jumbotron.bg-transparent.vertical-gap
+    .container-fluid
+      .row
+
+        .col-12.mb-5.col-md-6.col-lg-5.offset-lg-1.my-md-auto
+          h1.poppins.header-text.capitalize Various technologies #[br]to choose from...
+          p.raleway.main-text.lead Web development presents a multitude of tools spanning the development process, from design to deployment. GitInfo fetches information from GitHub and Wikipedia for a curated list of popular tools.
+          a.btn.btn-lg.btn-wide.btn-accent.poppins.capitalize(href="frontend") Get started
+
+        .col-12.col-md-6.my-md-auto
+          img.hero-image(src="img/svg/Hero Image.svg", alt="User coding")
+
+main
+  //- Cards
+  include ./components/card
+
+  //- Section One
+  section.vertical-gap
+    .container-fluid
+      .row.justify-content-center
+
+        .col-12.mt-5.order-last.col-md-6.order-md-first.col-lg-5.offset-lg-1.col-xl-4.offset-xl-1.my-auto
+          h2.poppins.header-text.capitalize Keep an eye on popular tool's GitHub activity
+          p.raleway.main-text Web development changes rapidly, keeping even most seasoned developers on their toes. GitInfo can help you stay up-to-date with popular development tool's GitHub repositories.
+          a.btn.btn-lg.btn-wide.btn-accent.poppins.capitalize(href="frontend") View List
+
+        .col-12.order-first.col-md-6.order-md-last.my-auto
+          img(src="img/svg/Body Image - Section.svg", alt="User coding and GitHub activity")
+
+  //- Section Two
+  section.vertical-gap
+    .container-fluid
+      .row
+
+        .col-12.col-md-5.my-auto
+          img(src="img/svg/Body Image - Main.svg", alt="User walking with tablet")
+
+        .col-12.col-md-6.offset-md-1.col-lg-5.offset-lg-2.col-xl-4.offset-xl-1.my-auto
+          h2.poppins.header-text.capitalize GitInfo fetches a curated list of my go-tos
+          p.raleway.main-text There are many languages and tools to explore when learning about web development. I built GitInfo to gather information as an additional source to keep me up to date with some of my personal favorties.
+          a.btn.btn-lg.btn-wide.btn-accent.poppins.capitalize(href="about") About
+
+include ./partials/footer
